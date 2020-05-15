@@ -14,15 +14,15 @@
 		<label>Creator last name</label>
 			<input type="text" name="lastname">
 		<label>Creator picture</label>
-			<input type="text" name="image">
+			<input type="text" name="creator_image">
 		<label>Birth year</label>
 			<input type="number" name="birthyear">
 		<label>Year died</label>
 			<input type="number" name="deathyear">
 		<label>Select a museum</label>
-		<select>
+		<select name="museum">
 			<% museums.forEach(m => { %>
-				<option><%= m.name %></option>
+				<option value="<%= m._id %>"><%= m.name %></option>
 			<% }) %>
 		</select>
 		<button>Add it to the list</button>
